@@ -9,30 +9,24 @@
 
     var debug = false;
 
-
     $.log = function(text, obj) {
 
         if (debug) {
 
+            var formatedTime = fg.echo.dateFormat(new Date(), true, true, true);
+            var clearTime = formatedTime.replace(/&nbsp;/g, ' ');
+            var message = '___[' + clearTime + '] [' + text + ']___';
+
             if (typeof obj !== 'undefined') {
-
-                console.log('___[' + text + ']___' + ':', obj);
-
+                console.log(message + ':', obj);
             } else {
-
-                console.log('___[' + text + ']___');
-
+                console.log(message);
             }
-
         }
-
     };
-
 
     $.log.setDebug = function(value) {
-
         debug = value;
-
     };
 
-})($);
+})(jQuery);
