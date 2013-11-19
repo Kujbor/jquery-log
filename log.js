@@ -24,5 +24,4 @@ define("jquery.log", ["jquery"], function($) {
     $.log.setDebug = function(value) {
         debug = value;
     };
-
 });
