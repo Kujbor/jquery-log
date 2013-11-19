@@ -1,9 +1,9 @@
 /*
- * log.js - jQuery plugin for handy logging
+ * jquery.log.js - jQuery plugin for handy logging
  * Author Oleg Taranov aka Kujbor
  * Copyright (C) 2013: CubeComp Development
  */
-(function($) {
+define("jquery.log", ["jquery"], function() {
 
     "use strict";
 
@@ -13,14 +13,10 @@
 
         if (debug) {
 
-            var formatedTime = fg.echo.dateFormat(new Date(), true, true, true);
-            var clearTime = formatedTime.replace(/&nbsp;/g, ' ');
-            var message = '___[' + clearTime + '] [' + text + ']___';
-
-            if (typeof obj !== 'undefined') {
-                console.log(message + ':', obj);
+            if (obj) {
+                console.log("___[" + text + "]___" + ":", obj);
             } else {
-                console.log(message);
+                console.log("___[" + text + "]___");
             }
         }
     };
@@ -29,4 +25,4 @@
         debug = value;
     };
 
-})(jQuery);
+});
