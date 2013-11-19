@@ -3,7 +3,7 @@
  * Author Oleg Taranov aka Kujbor
  * Copyright (C) 2013: CubeComp Development
  */
-define("jquery.log", ["jquery"], function() {
+define("jquery.log", ["jquery"], function($) {
 
     "use strict";
 
