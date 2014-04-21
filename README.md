@@ -1,4 +1,4 @@
-jquery-log
+jquery.log.js
 ==========
 
 jQuery plugin for handy logging
